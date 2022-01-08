@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SearchTableViewViewController: UITableViewController {
     private lazy var searchController:  UISearchController = {
@@ -18,13 +19,31 @@ class SearchTableViewViewController: UITableViewController {
         return sc
     }()
     
+    
+    private let apiService = APIService()
+    private var subscribers = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        performSearch()
     }
     
     private func setUpNavigationBar(){
         navigationItem.searchController = searchController
+    }
+    
+    private func performSearch(){
+        apiService.fetchSymbolsPublisher(keywords: "S&P500").sink { (completion) in
+            switch completion {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .finished: break
+            }
+        } receiveValue: { (searchResults) in
+            print(searchResults )
+        }.store(in: &subscribers)
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
