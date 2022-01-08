@@ -14,6 +14,7 @@
 		C28302832787DE6400356A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28302812787DE6400356A00 /* Main.storyboard */; };
 		C28302852787DE6400356A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28302842787DE6400356A00 /* Assets.xcassets */; };
 		C28302882787DE6400356A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28302862787DE6400356A00 /* LaunchScreen.storyboard */; };
+		C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C28302842787DE6400356A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28302872787DE6400356A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28302892787DE6400356A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,15 +82,32 @@
 		C283027A2787DE6400356A00 /* Ios-dca-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				C2E542FC27893F1600422E80 /* Controller */,
+				C2E542FB27893EDD00422E80 /* View */,
 				C283027B2787DE6400356A00 /* AppDelegate.swift */,
 				C283027D2787DE6400356A00 /* SceneDelegate.swift */,
-				C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */,
 				C28302812787DE6400356A00 /* Main.storyboard */,
 				C28302842787DE6400356A00 /* Assets.xcassets */,
 				C28302862787DE6400356A00 /* LaunchScreen.storyboard */,
 				C28302892787DE6400356A00 /* Info.plist */,
 			);
 			path = "Ios-dca-calculator";
+			sourceTree = "<group>";
+		};
+		C2E542FB27893EDD00422E80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2E542FC27893F1600422E80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */,
+				C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */,
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
 				C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */,
 			);
