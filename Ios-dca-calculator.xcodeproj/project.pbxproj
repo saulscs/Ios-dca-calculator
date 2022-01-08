@@ -15,6 +15,8 @@
 		C28302852787DE6400356A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28302842787DE6400356A00 /* Assets.xcassets */; };
 		C28302882787DE6400356A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28302862787DE6400356A00 /* LaunchScreen.storyboard */; };
 		C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */; };
+		C2E54301278942DA00422E80 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54300278942DA00422E80 /* APIService.swift */; };
+		C2E54304278944AF00422E80 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54303278944AF00422E80 /* SearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		C28302872787DE6400356A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28302892787DE6400356A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		C2E54300278942DA00422E80 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C2E54303278944AF00422E80 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,8 @@
 		C283027A2787DE6400356A00 /* Ios-dca-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				C2E543022789448C00422E80 /* Model */,
+				C2E542FF278942BC00422E80 /* Services */,
 				C2E542FC27893F1600422E80 /* Controller */,
 				C2E542FB27893EDD00422E80 /* View */,
 				C283027B2787DE6400356A00 /* AppDelegate.swift */,
@@ -108,6 +114,22 @@
 				C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2E542FF278942BC00422E80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C2E54300278942DA00422E80 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C2E543022789448C00422E80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2E54303278944AF00422E80 /* SearchResults.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */,
+				C2E54301278942DA00422E80 /* APIService.swift in Sources */,
 				C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */,
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
+				C2E54304278944AF00422E80 /* SearchResults.swift in Sources */,
 				C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
