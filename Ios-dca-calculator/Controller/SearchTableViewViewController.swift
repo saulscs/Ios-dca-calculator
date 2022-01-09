@@ -22,15 +22,34 @@ class SearchTableViewViewController: UITableViewController {
     
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
+    @Published private var searchQuery = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
-        performSearch()
+        observeForm()
+        //performSearch()
     }
     
     private func setUpNavigationBar(){
         navigationItem.searchController = searchController
+    }
+    
+    private func observeForm(){
+        $searchQuery
+            .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
+            .sink{ [unowned self] (searchQuery) in
+                self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
+                    switch completion {
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    case .finished: break
+                    }
+                } receiveValue: { (searchResults) in
+                    print(searchResults )
+                }.store(in: &self.subscribers)
+                print(searchQuery)
+            }.store(in: &subscribers)
     }
     
     private func performSearch(){
@@ -60,6 +79,9 @@ class SearchTableViewViewController: UITableViewController {
 extension SearchTableViewViewController: UISearchResultsUpdating,
    UISearchControllerDelegate{
     func updateSearchResults(for searchController: UISearchController) {
-        
+        guard let searchQuery = searchController.searchBar.text,
+                !searchQuery.isEmpty else {return}
+        print(searchQuery)
+        self.searchQuery = searchQuery
     }
 }
