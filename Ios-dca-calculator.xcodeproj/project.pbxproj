@@ -17,6 +17,7 @@
 		C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */; };
 		C2E54301278942DA00422E80 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54300278942DA00422E80 /* APIService.swift */; };
 		C2E54304278944AF00422E80 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54303278944AF00422E80 /* SearchResults.swift */; };
+		C2E54306278B87CB00422E80 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		C2E54300278942DA00422E80 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C2E54303278944AF00422E80 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
 		EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */,
+				C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
 				C2E54304278944AF00422E80 /* SearchResults.swift in Sources */,
 				C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */,
+				C2E54306278B87CB00422E80 /* SearchPlaceholderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
