@@ -9,6 +9,12 @@ import UIKit
 import Combine
 
 class SearchTableViewViewController: UITableViewController {
+    
+    private enum Mode {
+        case onboarding
+        case search
+    }
+    
     private lazy var searchController:  UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
         sc.searchResultsUpdater = self
@@ -19,20 +25,27 @@ class SearchTableViewViewController: UITableViewController {
         return sc
     }()
     
-    
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
-    @Published private var searchQuery = String()
     private var searchResults: SearchResults?
+    @Published private var mode: Mode = .onboarding
+    @Published private var searchQuery = String()
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpTableView()
         observeForm()
     }
     
     private func setUpNavigationBar(){
         navigationItem.searchController = searchController
+    }
+    
+    private func setUpTableView(){
+        tableView.tableFooterView = UIView()
     }
     
     private func observeForm(){
@@ -52,6 +65,17 @@ class SearchTableViewViewController: UITableViewController {
                 }.store(in: &self.subscribers)
                 print(searchQuery)
             }.store(in: &subscribers)
+        
+        $mode.sink { [unowned  self](mode) in
+            switch mode {
+            case .onboarding:
+                let redView = UIView()
+                redView.backgroundColor = .red
+                self.tableView.backgroundView = redView
+            case .search:
+                self.tableView.backgroundView = nil
+            }
+        }.store(in: &subscribers)
     }
     
 
@@ -77,5 +101,9 @@ extension SearchTableViewViewController: UISearchResultsUpdating,
                 !searchQuery.isEmpty else {return}
         print(searchQuery)
         self.searchQuery = searchQuery
+    }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        mode = .search
     }
 }
