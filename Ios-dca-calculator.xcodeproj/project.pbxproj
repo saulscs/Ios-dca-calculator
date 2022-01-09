@@ -18,6 +18,7 @@
 		C2E54301278942DA00422E80 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54300278942DA00422E80 /* APIService.swift */; };
 		C2E54304278944AF00422E80 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54303278944AF00422E80 /* SearchResults.swift */; };
 		C2E54306278B87CB00422E80 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */; };
+		C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54308278B9A7100422E80 /* UIAnimatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C2E54300278942DA00422E80 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C2E54303278944AF00422E80 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
+		C2E54308278B9A7100422E80 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
 		EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		C283027A2787DE6400356A00 /* Ios-dca-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				C2E54307278B984700422E80 /* protocol */,
 				C2E543022789448C00422E80 /* Model */,
 				C2E542FF278942BC00422E80 /* Services */,
 				C2E542FC27893F1600422E80 /* Controller */,
@@ -133,6 +136,14 @@
 				C2E54303278944AF00422E80 /* SearchResults.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C2E54307278B984700422E80 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C2E54308278B9A7100422E80 /* UIAnimatable.swift */,
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */,
+				C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */,
 				C2E54301278942DA00422E80 /* APIService.swift in Sources */,
 				C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */,
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
