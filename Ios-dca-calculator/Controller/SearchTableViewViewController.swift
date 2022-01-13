@@ -93,6 +93,10 @@ class SearchTableViewViewController: UITableViewController, UIAnimatable {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "showCalculator", sender: nil)
+    }
 }
 
 
