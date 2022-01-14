@@ -19,6 +19,7 @@
 		C2E54304278944AF00422E80 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54303278944AF00422E80 /* SearchResults.swift */; };
 		C2E54306278B87CB00422E80 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */; };
 		C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54308278B9A7100422E80 /* UIAnimatable.swift */; };
+		C2FB0A0E27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB0A0D27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C2E54303278944AF00422E80 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		C2E54305278B87CB00422E80 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
 		C2E54308278B9A7100422E80 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
+		C2FB0A0D27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSerieMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E54303278944AF00422E80 /* SearchResults.swift */,
+				C2FB0A0D27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */,
 				C2E54301278942DA00422E80 /* APIService.swift in Sources */,
 				C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */,
+				C2FB0A0E27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift in Sources */,
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
 				C2E54304278944AF00422E80 /* SearchResults.swift in Sources */,
 				C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */,
