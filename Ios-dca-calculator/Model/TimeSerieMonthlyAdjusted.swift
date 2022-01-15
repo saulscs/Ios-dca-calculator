@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct MothInfo{
+    let date: Date
+    let adjustedOpen: Double
+    let adjustedClose: Double
+}
+
 struct TimeSerieMonthlyAdjusted: Decodable{
     let meta: Meta
     let timeSeries: [String: OHLC]
@@ -14,6 +20,13 @@ struct TimeSerieMonthlyAdjusted: Decodable{
     enum CodingKeys: String, CodingKey {
         case meta = "Meta Data"
         case timeSeries = "Monthly Adjusted Time Series"
+    }
+    
+    func getMonthInfos() -> [MothInfo] {
+        var monthInfos: [MothInfo] = []
+        let sortedTimesSeries = timeSeries.sorted(by: { $0.key > $1.key })
+        print("sorted: \(sortedTimesSeries)")
+        return monthInfos
     }
 }
 
