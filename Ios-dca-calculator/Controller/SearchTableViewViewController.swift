@@ -98,23 +98,33 @@ class SearchTableViewViewController: UITableViewController, UIAnimatable {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         if let searResults = self.searchResults{
-            guard let symbol = searResults.items[indexPath.item].symbol else { return }
-            handleSelection(for: symbol)
+            let searchResult = searResults.items[indexPath.item]
+            let symbol = searchResult.symbol
+            handleSelection(for: symbol, searchResult: searchResult)
         }
     }
     
-    private func handleSelection(for symbol: String){
+    private func handleSelection(for symbol: String, searchResult: SearchResult){
         apiService.fetchTimeSerieMonthlyAdjustedToPublisher(keywords: symbol).sink { (completionResult) in
             switch completionResult {
             case .failure(let error):
                 print(error)
             case .finished: break
             }
-        } receiveValue: { (TimeSerieMonthlyAdjusted) in
+        } receiveValue: { [weak self] (TimeSerieMonthlyAdjusted) in
+            let asset = Asset(searchResult: searchResult, timesSeriesMonthlyAdjusted: TimeSerieMonthlyAdjusted)
+            self?.performSegue(withIdentifier: "showCalculator", sender: asset)
             print("sucess: \(TimeSerieMonthlyAdjusted.getMonthInfos())")
         }.store(in: &subscribers)
         
-        //performSegue(withIdentifier: "showCalculator", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "showCalculator",
+            let destination = segue.destination as? CalculatorTableViewController,
+            let asset = sender as? Asset {
+            destination.asset = asset
+        }
     }
 }
 

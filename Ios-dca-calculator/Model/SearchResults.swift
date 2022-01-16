@@ -16,10 +16,10 @@ struct SearchResults: Decodable{
 }
 
 struct SearchResult: Decodable {
-    let symbol: String?
-    let name: String?
-    let type: String?
-    let currency: String?
+    let symbol: String
+    let name: String
+    let type: String
+    let currency: String
     
     enum CodingKeys: String, CodingKey{
         case symbol = "1. symbol"

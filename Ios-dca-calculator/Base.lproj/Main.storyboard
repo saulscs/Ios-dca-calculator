@@ -31,7 +31,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BA" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9H3-S1-L5O">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BA" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9H3-S1-L5O">
                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-252.17391304347828" y="-563.16964285714278"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Calculator Table View Controller-->
         <scene sceneID="B0c-lD-YUU">
             <objects>
-                <tableViewController id="ThC-aF-gWm" sceneMemberID="viewController">
+                <tableViewController id="ThC-aF-gWm" customClass="CalculatorTableViewController" customModule="Ios_dca_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FPz-rh-oI2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,6 +428,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="XiY-5I-ZFr"/>
                     <connections>
+                        <outlet property="assetNameLabel" destination="GBu-S2-M20" id="FPO-RL-de9"/>
+                        <outlet property="symbolLabel" destination="UEA-Fd-1v5" id="4Q7-vv-e4V"/>
                         <segue destination="iY9-6Z-hxY" kind="show" id="lck-qD-Eby"/>
                     </connections>
                 </tableViewController>
