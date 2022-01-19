@@ -10,6 +10,7 @@
 		4C66EDBC8E9915C311203A48 /* Pods_Ios_dca_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5E1D10DDFCFD33000A3308 /* Pods_Ios_dca_calculator.framework */; };
 		C270E1E627965B6B00A5895D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E527965B6B00A5895D /* String+Extensions.swift */; };
 		C270E1E827966B3900A5895D /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E727966B3900A5895D /* UITextField+Extensions.swift */; };
+		C270E1EA279798EB00A5895D /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */; };
 		C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027B2787DE6400356A00 /* AppDelegate.swift */; };
 		C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027D2787DE6400356A00 /* SceneDelegate.swift */; };
 		C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */; };
@@ -31,6 +32,7 @@
 		A6BC3D375050BD313D4F300B /* Pods-Ios-dca-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios-dca-calculator.release.xcconfig"; path = "Target Support Files/Pods-Ios-dca-calculator/Pods-Ios-dca-calculator.release.xcconfig"; sourceTree = "<group>"; };
 		C270E1E527965B6B00A5895D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C270E1E727966B3900A5895D /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		C28302782787DE6400356A00 /* Ios-dca-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios-dca-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C283027B2787DE6400356A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C283027D2787DE6400356A00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */,
 				C2FB0A0F2793C33700E66EB0 /* CalculatorTableViewController.swift */,
+				C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C270E1EA279798EB00A5895D /* DateSelectionTableViewController.swift in Sources */,
 				C270E1E827966B3900A5895D /* UITextField+Extensions.swift in Sources */,
 				C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */,
 				C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */,
