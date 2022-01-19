@@ -11,6 +11,7 @@
 		C270E1E627965B6B00A5895D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E527965B6B00A5895D /* String+Extensions.swift */; };
 		C270E1E827966B3900A5895D /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E727966B3900A5895D /* UITextField+Extensions.swift */; };
 		C270E1EA279798EB00A5895D /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */; };
+		C270E1EE2797A97700A5895D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1ED2797A97700A5895D /* Date+Extensions.swift */; };
 		C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027B2787DE6400356A00 /* AppDelegate.swift */; };
 		C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027D2787DE6400356A00 /* SceneDelegate.swift */; };
 		C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */; };
@@ -33,6 +34,7 @@
 		C270E1E527965B6B00A5895D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C270E1E727966B3900A5895D /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
+		C270E1ED2797A97700A5895D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		C28302782787DE6400356A00 /* Ios-dca-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios-dca-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C283027B2787DE6400356A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C283027D2787DE6400356A00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				C270E1E527965B6B00A5895D /* String+Extensions.swift */,
 				C270E1E727966B3900A5895D /* UITextField+Extensions.swift */,
+				C270E1ED2797A97700A5895D /* Date+Extensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				C2FB0A122793C40A00E66EB0 /* Asset.swift in Sources */,
 				C270E1E627965B6B00A5895D /* String+Extensions.swift in Sources */,
 				C2FB0A102793C33700E66EB0 /* CalculatorTableViewController.swift in Sources */,
+				C270E1EE2797A97700A5895D /* Date+Extensions.swift in Sources */,
 				C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */,
 				C2FB0A0E27910C8B00E66EB0 /* TimeSerieMonthlyAdjusted.swift in Sources */,
 				C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */,
