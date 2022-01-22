@@ -52,7 +52,8 @@ class CalculatorTableViewController: UITableViewController {
     
     private func setupDateSlider(){
         if let count = asset?.timesSeriesMonthlyAdjusted.getMonthInfos().count {
-            dateSlider.maximumValue = count.floatValue
+            let dateSliderCount = count - 1
+            dateSlider.maximumValue = dateSliderCount.floatValue
         }
     }
     
@@ -96,12 +97,13 @@ class CalculatorTableViewController: UITableViewController {
 }
 
 extension CalculatorTableViewController: UITextFieldDelegate {
+    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
         if textField == initialDateInvesmentTextField {
             performSegue(withIdentifier: "showDateSelection", sender: asset?.timesSeriesMonthlyAdjusted)
+            return false
         }
-        return false
+        return true
     }
 }
 
