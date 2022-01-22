@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class CalculatorTableViewController: UITableViewController {
     @IBOutlet weak var initialInvesmentAmountTexField: UITextField!
@@ -16,17 +17,21 @@ class CalculatorTableViewController: UITableViewController {
     @IBOutlet weak var assetNameLabel: UILabel!
     @IBOutlet var currencyLabel: [UILabel]!
     @IBOutlet weak var investmentAmountCurrencyLabel: UILabel!
-    
+    @IBOutlet weak var dateSlider: UISlider!
     
     var asset: Asset?
     
-    private var initialDateOfInvesmentIndex: Int?
+    @Published private var initialDateOfInvesmentIndex: Int?
+    
+    private var subscribers = Set<AnyCancellable>()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
         setUpTextFields()
+        observeForm()
+        setupDateSlider()
         
     }
     
@@ -43,8 +48,23 @@ class CalculatorTableViewController: UITableViewController {
         initialInvesmentAmountTexField.addDoneButton()
         monthlyDollarCostAveringTextField.addDoneButton()
         initialDateInvesmentTextField.delegate = self
-        
-        //showDateSelection
+    }
+    
+    private func setupDateSlider(){
+        if let count = asset?.timesSeriesMonthlyAdjusted.getMonthInfos().count {
+            dateSlider.maximumValue = count.floatValue
+        }
+    }
+    
+    private func  observeForm() {
+        $initialDateOfInvesmentIndex.sink { [weak self] (index) in
+            guard let index = index else { return }
+            self?.dateSlider.value = index.floatValue
+            
+            if let dateString = self?.asset?.timesSeriesMonthlyAdjusted.getMonthInfos()[index].date.MMYYFormat{
+                self?.initialDateInvesmentTextField.text = dateString
+            }
+        }.store(in: &subscribers)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,6 +87,11 @@ class CalculatorTableViewController: UITableViewController {
             let dateString = monthInfo.date.MMYYFormat
             initialDateInvesmentTextField.text = dateString
         }
+    }
+    
+    @IBAction func dateSliderDidChange(_ sender: UISlider){
+        initialDateOfInvesmentIndex = Int(sender.value)
+        print(sender.value)
     }
 }
 

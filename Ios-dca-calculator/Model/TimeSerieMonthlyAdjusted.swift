@@ -16,7 +16,6 @@ struct MothInfo{
 struct TimeSerieMonthlyAdjusted: Decodable{
     let meta: Meta
     let timeSeries: [String: OHLC]
-    
     enum CodingKeys: String, CodingKey {
         case meta = "Meta Data"
         case timeSeries = "Monthly Adjusted Time Series"
@@ -33,9 +32,6 @@ struct TimeSerieMonthlyAdjusted: Decodable{
             let monthInfo = MothInfo(date: date, adjustedOpen: adjustedOpen, adjustedClose: Double(ohlc.adjustedClose)!)
             monthInfos.append(monthInfo)
         }
-        
-        
-        
         print("sorted: \(sortedTimesSeries)")
         return monthInfos
     }
