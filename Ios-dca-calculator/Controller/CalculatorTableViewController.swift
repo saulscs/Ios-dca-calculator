@@ -96,12 +96,15 @@ class CalculatorTableViewController: UITableViewController {
             
             guard let initialInvesmentAmount = initialInvesmentAmount,
                 let monthlyDollarCostAveringAmount = monthlyDollarCostAveringAmount,
-                let initialDateOfInvesmentIndex = initialDateOfInvesmentIndex else { return }
+                let initialDateOfInvesmentIndex = initialDateOfInvesmentIndex,
+                let asset = self?.asset else { return }
  
             
-            let result = self?.dcaService.calcualte(initialInvesmentAmount: initialInvesmentAmount.doubleValue,
+            let result = self?.dcaService.calcualte(asset: asset,
+                                              initialInvesmentAmount: initialInvesmentAmount.doubleValue,
                                               monthlyCostAveringAmount: monthlyDollarCostAveringAmount.doubleValue,
-                                              initialDateOfInvesmentIndex: initialInvesmentAmount)
+                                              initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
+            
             self?.currentValueLabel.text = result?.currentValue.stringValue
             self?.invesmentAmountLabel.text = result?.investmentAmount.stringValue
             self?.gainLabel.text = result?.gain.stringValue
@@ -148,5 +151,3 @@ extension CalculatorTableViewController: UITextFieldDelegate {
         return true
     }
 }
-
-

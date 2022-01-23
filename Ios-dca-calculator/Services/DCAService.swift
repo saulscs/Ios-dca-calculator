@@ -8,26 +8,42 @@
 import Foundation
 
 struct DCAService {
-    func calcualte(initialInvesmentAmount: Double, monthlyCostAveringAmount: Double, initialDateOfInvesmentIndex: Int) -> DCAResult{
+    func calcualte(asset: Asset,
+                   initialInvesmentAmount: Double,
+                   monthlyCostAveringAmount: Double,
+                   initialDateOfInvesmentIndex: Int) -> DCAResult{
         
         let investmentAmount = getInvesmentAmount(initialInvesmentAmount: initialInvesmentAmount,
                                                   monthlyCostAveringAmount: monthlyCostAveringAmount,
                                                   initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
         
+        let latestSharePrice = getLatestSharePrice(asset: asset)
         
-        return .init(currentValue: 0,
+        let currentValue = getCurrentValue(numberOfShares: 100, latestSharePrice: latestSharePrice)
+        
+        return .init(currentValue: currentValue,
                      investmentAmount: investmentAmount,
                      gain: 0,
                      yield: 0,
                      annualReturn: 0)
     }
     
-    private func getInvesmentAmount(initialInvesmentAmount: Double, monthlyCostAveringAmount: Double, initialDateOfInvesmentIndex: Int) -> Double {
+    private func getInvesmentAmount(initialInvesmentAmount: Double,
+                                    monthlyCostAveringAmount: Double,
+                                    initialDateOfInvesmentIndex: Int) -> Double {
         var totalAmount = Double()
         totalAmount += initialInvesmentAmount
         let dollarCostAveragingAmount = initialDateOfInvesmentIndex.doubleValue * monthlyCostAveringAmount
         totalAmount += dollarCostAveragingAmount
         return totalAmount
+    }
+    
+    private func getCurrentValue(numberOfShares: Double, latestSharePrice: Double) -> Double {
+        return numberOfShares * latestSharePrice
+    }
+    
+    private func getLatestSharePrice(asset: Asset ) -> Double{
+        return  asset.timesSeriesMonthlyAdjusted.getMonthInfos().first?.adjustedClose ?? 0
     }
 }
 
