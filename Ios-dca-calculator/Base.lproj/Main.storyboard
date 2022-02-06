@@ -178,7 +178,7 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-aD-Ezl">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NH7-aD-Ezl">
                                                             <rect key="frame" x="16" y="50" width="335" height="23"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i95-Ei-iFd">
@@ -188,7 +188,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guT-tl-txt">
-                                                                    <rect key="frame" x="62.5" y="0.0" width="272.5" height="23"/>
+                                                                    <rect key="frame" x="78.5" y="0.0" width="256.5" height="23"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </view>
                                                             </subviews>
