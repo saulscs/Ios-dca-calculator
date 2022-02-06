@@ -95,17 +95,18 @@ class CalculatorTableViewController: UITableViewController {
             [weak self](initialInvesmentAmount, monthlyDollarCostAveringAmount, initialDateOfInvesmentIndex) in
             
             guard let initialInvesmentAmount = initialInvesmentAmount,
-                let monthlyDollarCostAveringAmount = monthlyDollarCostAveringAmount,
-                let initialDateOfInvesmentIndex = initialDateOfInvesmentIndex,
-                let asset = self?.asset else { return }
- 
+                  let monthlyDollarCostAveringAmount = monthlyDollarCostAveringAmount,
+                  let initialDateOfInvesmentIndex = initialDateOfInvesmentIndex,
+                  let asset = self?.asset else { return }
+            
             
             let result = self?.dcaService.calcualte(asset: asset,
-                                              initialInvesmentAmount: initialInvesmentAmount.doubleValue,
-                                              monthlyCostAveringAmount: monthlyDollarCostAveringAmount.doubleValue,
-                                              initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
+                                                    initialInvesmentAmount: initialInvesmentAmount.doubleValue,
+                                                    monthlyCostAveringAmount: monthlyDollarCostAveringAmount.doubleValue,
+                                                    initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
             
-            self?.currentValueLabel.text = result?.currentValue.stringValue
+            self?.currentValueLabel.backgroundColor = (result?.isProfitable == true) ? .themeGreenshade  : .themeRedShade
+            self?.currentValueLabel.text = result?.currentValue.twoDecimalPlaceString
             self?.invesmentAmountLabel.text = result?.investmentAmount.stringValue
             self?.gainLabel.text = result?.gain.stringValue
             self?.yieldLabel.text = result?.yield.stringValue
@@ -115,7 +116,7 @@ class CalculatorTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDateSelection", let dateSelectionTableViewController = segue.destination as? DateSelectionTableViewController,
-            let timeSeriesMonthlyAdjusted = sender as? TimeSerieMonthlyAdjusted{
+           let timeSeriesMonthlyAdjusted = sender as? TimeSerieMonthlyAdjusted{
             dateSelectionTableViewController.timeSerieMonthlyAdjusted = timeSeriesMonthlyAdjusted
             dateSelectionTableViewController.selectedIndex = initialDateOfInvesmentIndex
             dateSelectionTableViewController.didSelectDate =  { [weak self] index in
