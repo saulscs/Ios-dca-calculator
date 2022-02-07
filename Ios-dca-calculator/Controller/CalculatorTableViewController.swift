@@ -105,10 +105,13 @@ class CalculatorTableViewController: UITableViewController {
                                                     monthlyCostAveringAmount: monthlyDollarCostAveringAmount.doubleValue,
                                                     initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
             
-            self?.currentValueLabel.backgroundColor = (result?.isProfitable == true) ? .themeGreenshade  : .themeRedShade
+            let isProfitable = (result?.isProfitable == true)
+            let gainSymbol = isProfitable ? "+" : ""
+            
+            self?.currentValueLabel.backgroundColor =  isProfitable ? .themeGreenshade  : .themeRedShade
             self?.currentValueLabel.text = result?.currentValue.currencyFormat
             self?.invesmentAmountLabel.text = result?.investmentAmount.currencyFormat
-            self?.gainLabel.text = result?.gain.stringValue
+            self?.gainLabel.text = result?.gain.toCurrencyFormat(hasDollarSymbol: false, hasDecimalPlaces: false).prefix(withText: gainSymbol)
             self?.yieldLabel.text = result?.yield.stringValue
             self?.annualReturnLabel.text = result?.annualReturn.stringValue
         }.store(in: &subscribers)
