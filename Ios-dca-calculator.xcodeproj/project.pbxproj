@@ -13,6 +13,7 @@
 		C270E1E827966B3900A5895D /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E727966B3900A5895D /* UITextField+Extensions.swift */; };
 		C270E1EA279798EB00A5895D /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */; };
 		C270E1EE2797A97700A5895D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270E1ED2797A97700A5895D /* Date+Extensions.swift */; };
+		C27B648F27B1C71C00A86825 /* Ios_dca_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B648E27B1C71C00A86825 /* Ios_dca_calculatorTests.swift */; };
 		C283027C2787DE6400356A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027B2787DE6400356A00 /* AppDelegate.swift */; };
 		C283027E2787DE6400356A00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027D2787DE6400356A00 /* SceneDelegate.swift */; };
 		C28302802787DE6400356A00 /* SearchTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283027F2787DE6400356A00 /* SearchTableViewViewController.swift */; };
@@ -32,6 +33,16 @@
 		C2FB0A122793C40A00E66EB0 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB0A112793C40A00E66EB0 /* Asset.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C27B649027B1C71C00A86825 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C28302702787DE6400356A00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28302772787DE6400356A00;
+			remoteInfo = "Ios-dca-calculator";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A275F0FE3E5C048B8AF7E976 /* Pods-Ios-dca-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios-dca-calculator.debug.xcconfig"; path = "Target Support Files/Pods-Ios-dca-calculator/Pods-Ios-dca-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		A6BC3D375050BD313D4F300B /* Pods-Ios-dca-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios-dca-calculator.release.xcconfig"; path = "Target Support Files/Pods-Ios-dca-calculator/Pods-Ios-dca-calculator.release.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +51,8 @@
 		C270E1E727966B3900A5895D /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		C270E1E9279798EB00A5895D /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		C270E1ED2797A97700A5895D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		C27B648C27B1C71C00A86825 /* Ios-dca-calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ios-dca-calculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27B648E27B1C71C00A86825 /* Ios_dca_calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ios_dca_calculatorTests.swift; sourceTree = "<group>"; };
 		C28302782787DE6400356A00 /* Ios-dca-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios-dca-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C283027B2787DE6400356A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C283027D2787DE6400356A00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C27B648927B1C71C00A86825 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C28302752787DE6400356A00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,10 +124,19 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		C27B648D27B1C71C00A86825 /* Ios-dca-calculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				C27B648E27B1C71C00A86825 /* Ios_dca_calculatorTests.swift */,
+			);
+			path = "Ios-dca-calculatorTests";
+			sourceTree = "<group>";
+		};
 		C283026F2787DE6400356A00 = {
 			isa = PBXGroup;
 			children = (
 				C283027A2787DE6400356A00 /* Ios-dca-calculator */,
+				C27B648D27B1C71C00A86825 /* Ios-dca-calculatorTests */,
 				C28302792787DE6400356A00 /* Products */,
 				3819557B0768CEE02DB46F5F /* Pods */,
 				8823EC68EAE8722B3946F5EB /* Frameworks */,
@@ -118,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C28302782787DE6400356A00 /* Ios-dca-calculator.app */,
+				C27B648C27B1C71C00A86825 /* Ios-dca-calculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +220,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C27B648B27B1C71C00A86825 /* Ios-dca-calculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C27B649427B1C71C00A86825 /* Build configuration list for PBXNativeTarget "Ios-dca-calculatorTests" */;
+			buildPhases = (
+				C27B648827B1C71C00A86825 /* Sources */,
+				C27B648927B1C71C00A86825 /* Frameworks */,
+				C27B648A27B1C71C00A86825 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C27B649127B1C71C00A86825 /* PBXTargetDependency */,
+			);
+			name = "Ios-dca-calculatorTests";
+			productName = "Ios-dca-calculatorTests";
+			productReference = C27B648C27B1C71C00A86825 /* Ios-dca-calculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C28302772787DE6400356A00 /* Ios-dca-calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C283028C2787DE6400356A00 /* Build configuration list for PBXNativeTarget "Ios-dca-calculator" */;
@@ -216,9 +264,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					C27B648B27B1C71C00A86825 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = C28302772787DE6400356A00;
+					};
 					C28302772787DE6400356A00 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -238,11 +290,19 @@
 			projectRoot = "";
 			targets = (
 				C28302772787DE6400356A00 /* Ios-dca-calculator */,
+				C27B648B27B1C71C00A86825 /* Ios-dca-calculatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C27B648A27B1C71C00A86825 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C28302762787DE6400356A00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +358,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C27B648827B1C71C00A86825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27B648F27B1C71C00A86825 /* Ios_dca_calculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C28302742787DE6400356A00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +394,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C27B649127B1C71C00A86825 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C28302772787DE6400356A00 /* Ios-dca-calculator */;
+			targetProxy = C27B649027B1C71C00A86825 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C28302812787DE6400356A00 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -346,6 +422,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C27B649227B1C71C00A86825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VFR5ND6JR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul.Ios-dca-calculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ios-dca-calculator.app/Ios-dca-calculator";
+			};
+			name = Debug;
+		};
+		C27B649327B1C71C00A86825 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VFR5ND6JR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul.Ios-dca-calculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ios-dca-calculator.app/Ios-dca-calculator";
+			};
+			name = Release;
+		};
 		C283028A2787DE6400356A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -529,6 +643,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C27B649427B1C71C00A86825 /* Build configuration list for PBXNativeTarget "Ios-dca-calculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27B649227B1C71C00A86825 /* Debug */,
+				C27B649327B1C71C00A86825 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C28302732787DE6400356A00 /* Build configuration list for PBXProject "Ios-dca-calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
