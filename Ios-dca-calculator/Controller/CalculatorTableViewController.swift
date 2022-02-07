@@ -51,6 +51,7 @@ class CalculatorTableViewController: UITableViewController {
     }
     
     private func setUpViews() {
+        navigationItem.title = asset?.searchResult.symbol 
         symbolLabel.text = asset?.searchResult.symbol
         assetNameLabel.text = asset?.searchResult.name
         investmentAmountCurrencyLabel.text = asset?.searchResult.currency
