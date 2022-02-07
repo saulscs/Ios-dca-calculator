@@ -41,6 +41,7 @@ class CalculatorTableViewController: UITableViewController {
         setUpTextFields()
         observeForm()
         setupDateSlider()
+        setUpTableView()
         resetViews()
         
     }
@@ -48,6 +49,10 @@ class CalculatorTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initialInvesmentAmountTexField.becomeFirstResponder()
+    }
+    
+    private func setUpTableView(){
+        tableView.isScrollEnabled = false
     }
     
     private func setUpViews() {
