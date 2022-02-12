@@ -44,7 +44,7 @@ struct DCAService {
                      isProfitable: isProfitable)
     }
     
-    private func getInvesmentAmount(initialInvesmentAmount: Double,
+    func getInvesmentAmount(initialInvesmentAmount: Double,
                                     monthlyCostAveringAmount: Double,
                                     initialDateOfInvesmentIndex: Int) -> Double {
         var totalAmount = Double()
