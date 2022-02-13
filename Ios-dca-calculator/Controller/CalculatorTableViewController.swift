@@ -34,6 +34,7 @@ class CalculatorTableViewController: UITableViewController {
     
     private var subscribers = Set<AnyCancellable>()
     private let dcaService = DCAService()
+    private let calculatorPresenter = CalculatorPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,22 +113,25 @@ class CalculatorTableViewController: UITableViewController {
                   let asset = self?.asset else { return }
             
             
-            let result = self?.dcaService.calcualte(asset: asset,
+            guard let this = self else { return }
+            
+            let result = this.dcaService.calcualte(asset: asset,
                                                     initialInvesmentAmount: initialInvesmentAmount.doubleValue,
                                                     monthlyCostAveringAmount: monthlyDollarCostAveringAmount.doubleValue,
                                                     initialDateOfInvesmentIndex: initialDateOfInvesmentIndex)
             
-            let isProfitable = (result?.isProfitable == true)
-            let gainSymbol = isProfitable ? "+" : ""
             
-            self?.currentValueLabel.backgroundColor =  isProfitable ? .themeGreenshade  : .themeRedShade
-            self?.currentValueLabel.text = result?.currentValue.currencyFormat
-            self?.invesmentAmountLabel.text = result?.investmentAmount.toCurrencyFormat(hasDecimalPlaces: false)
-            self?.gainLabel.text = result?.gain.toCurrencyFormat(hasDollarSymbol: true, hasDecimalPlaces: false).prefix(withText: gainSymbol)
-            self?.yieldLabel.text = result?.yield.percentageFormat.prefix(withText: gainSymbol).addBrackets()
-            self?.yieldLabel.textColor = isProfitable ? .systemGreen : .systemRed
-            self?.annualReturnLabel.text = result?.annualReturn.percentageFormat
-            self?.annualReturnLabel.textColor = isProfitable ? .systemGreen : .systemRed
+            let presentation = this.calculatorPresenter.getPresentation(result: result)
+            
+            
+            self?.currentValueLabel.backgroundColor =  presentation.currentValueLabelBackgroundColor
+            self?.currentValueLabel.text = presentation.currentValue
+            self?.invesmentAmountLabel.text = presentation.invesmentAmount
+            self?.gainLabel.text = presentation.gain
+            self?.yieldLabel.text = presentation.yield
+            self?.yieldLabel.textColor = presentation.yieldLabelTextColor
+            self?.annualReturnLabel.text = presentation.annualReturn
+            self?.annualReturnLabel.textColor = presentation.annualReturnLabelTextColor
         }.store(in: &subscribers)
     }
     

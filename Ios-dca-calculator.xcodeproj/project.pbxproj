@@ -20,6 +20,7 @@
 		C28302832787DE6400356A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28302812787DE6400356A00 /* Main.storyboard */; };
 		C28302852787DE6400356A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28302842787DE6400356A00 /* Assets.xcassets */; };
 		C28302882787DE6400356A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28302862787DE6400356A00 /* LaunchScreen.storyboard */; };
+		C2C01FAD27B9ADCF00C9F033 /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C01FAC27B9ADCF00C9F033 /* CalculatorPresenter.swift */; };
 		C2E542FE27893F5200422E80 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */; };
 		C2E54301278942DA00422E80 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54300278942DA00422E80 /* APIService.swift */; };
 		C2E54304278944AF00422E80 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E54303278944AF00422E80 /* SearchResults.swift */; };
@@ -61,6 +62,7 @@
 		C28302842787DE6400356A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28302872787DE6400356A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C28302892787DE6400356A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C01FAC27B9ADCF00C9F033 /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
 		C2E542FD27893F5200422E80 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		C2E54300278942DA00422E80 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C2E54303278944AF00422E80 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				C2E54300278942DA00422E80 /* APIService.swift */,
 				C2E8D2C0279CF54200055A7E /* DCAService.swift */,
+				C2C01FAC27B9ADCF00C9F033 /* CalculatorPresenter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				C2E54309278B9A7100422E80 /* UIAnimatable.swift in Sources */,
 				C2E54301278942DA00422E80 /* APIService.swift in Sources */,
 				C2E8D2BF279CA28C00055A7E /* Int+Extensions.swift in Sources */,
+				C2C01FAD27B9ADCF00C9F033 /* CalculatorPresenter.swift in Sources */,
 				C2FB0A122793C40A00E66EB0 /* Asset.swift in Sources */,
 				C270E1E627965B6B00A5895D /* String+Extensions.swift in Sources */,
 				C2FB0A102793C33700E66EB0 /* CalculatorTableViewController.swift in Sources */,
@@ -588,6 +592,7 @@
 				DEVELOPMENT_TEAM = 7VFR5ND6JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ios-dca-calculator/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DCA Calculator";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -620,6 +625,7 @@
 				DEVELOPMENT_TEAM = 7VFR5ND6JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ios-dca-calculator/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "DCA Calculator";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
