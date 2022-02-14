@@ -1,6 +1,6 @@
 //
-//  Ios_dca_calculatorTests.swift
-//  Ios-dca-calculatorTests
+//  DCAServicesTests.swift
+//  DCAServicesTest
 //
 //  Created by saul corona on 07/02/22.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Ios_dca_calculator
 
-class Ios_dca_calculatorTests: XCTestCase {
+class DCAServicesTests: XCTestCase {
     
     // System under test
     var sut: DCAService!
